@@ -17,6 +17,9 @@ async function pegaArquivo(caminhoArquivo){
     catch(erro){
     tratarError(erro);
     }
+    finally {
+        console.log(chalk.yellow('operação concluída'));
+    }
 }
 
 
