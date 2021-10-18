@@ -1,11 +1,17 @@
 const chalk = require("chalk");
 const pegaArquivo = require("./index");
+const validaURLs = require('./http-validacoes');
 
 const caminho = process.argv;
 
 async  function processarTexto(caminhoArquivo){
     const resultado = await pegaArquivo(caminhoArquivo[2]);
-    console.log(chalk.yellow('Lista de links'), resultado);
+    if(caminho[3]=== 'validar'){
+        console.log(chalk.yellow('Links Validados'), validaURLs(resultado));
+    }else{
+        console.log(chalk.yellow('Lista de links'), resultado);
+    }
+   
 }
 
 processarTexto(caminho);
