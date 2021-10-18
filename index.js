@@ -1,6 +1,7 @@
 const chalk = require('chalk');
 const fs = require('fs');
 
+
 function extraiLinks(texto) {
     const regex = /\[([^\]]*)\]\((https:?\/\/[^$#\s].[^\s]*)\)/gm;
     const arrayResult = [];
