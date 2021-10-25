@@ -10,7 +10,7 @@ describe('pegaArquivo::', ()=>{
         expect(typeof pegaArquivo).toBe('function');
       })
       it('deve retornar array com resultados', async () => {
-        const resultado = await pegaArquivo('C:\labs\NodeJS\test\arquivos\texto1.md') 
+        const resultado = await pegaArquivo('../test/arquivos/texto1.md') 
         expect(resultado).toEqual(arrayResult)
       })
       
