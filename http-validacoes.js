@@ -26,16 +26,16 @@ function geraArrayURLs(arrayLinks) {
         .values(objtolink).join());
 }
 
-//spread operator
+
 async function validaURLs(arrayLinks) {
   const links = geraArrayURLs(arrayLinks);
   const statusLinks = await checaStatus(links);
-  const resultados = arrayLinks.map((objeto, indice) =>/*Paratenses para envolver o objeto*/ ({ 
+  const resultados = arrayLinks.map((objeto, indice) =>({ 
       ...objeto, 
       status: statusLinks[indice]
     }))
 
-    return resultados
+    return resultados;
 }
 
 module.exports = validaURLs;
